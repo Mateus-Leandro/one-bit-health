@@ -42,19 +42,18 @@ export default function Form() {
       valid = false;
     }
 
-    if (!valid) {
+    if (valid) {
+      imcCalculator();
+      setHeight(null);
+      setWeight(null);
+      setMessageImc("Seu imc é igual: ");
+      setTextButton("Calcular Novamente");
+    } else {
       setImc(null);
       setTextButton("Calcular");
       setMessageImc("Preencha o peso e a altura");
       Vibration.vibrate();
-      return;
     }
-
-    imcCalculator();
-    setHeight(null);
-    setWeight(null);
-    setMessageImc("Seu imc é igual: ");
-    setTextButton("Calcular Novamente");
   }
 
   return (
