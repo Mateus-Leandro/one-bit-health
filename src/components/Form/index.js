@@ -22,7 +22,9 @@ export default function Form() {
   const errorMessage = "*campo obrigatório";
 
   function imcCalculator() {
-    return setImc((weight / (height * height)).toFixed(2));
+    const heightFormat = height.replace(",", ".");
+    const weightFormat = weight.replace(",", ".");
+    return setImc((weightFormat / (heightFormat * heightFormat)).toFixed(2));
   }
 
   function validationImc() {
