@@ -9,13 +9,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
   },
-  resultImc: {
-    fontSize: 48,
+  information: {
+    fontSize: 18,
     fontWeight: "bold",
     color: "#ff0043",
   },
-  information: {
-    fontSize: 18,
+  resultImc: {
+    fontSize: 48,
     fontWeight: "bold",
     color: "#ff0043",
   },

@@ -4,8 +4,6 @@ const styles = StyleSheet.create({
   formContext: {
     width: "100%",
     height: "100%",
-    justifyContent: "space-around",
-    bottom: 0,
     backgroundColor: "#ffffff",
     alignItems: "center",
     borderTopLeftRadius: 30,
@@ -36,12 +34,13 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
-    width: "90%",
+    width: "95%",
     backgroundColor: "#ff0043",
     paddingTop: 14,
     paddingBottom: 14,
     marginLeft: 12,
-    margin: 30,
+    marginTop: 20,
+    marginBottom: 120,
   },
   textButtonCalculator: {
     fontSize: 20,
@@ -52,6 +51,10 @@ const styles = StyleSheet.create({
     color: "red",
     fontWeight: "bold",
     paddingLeft: 20,
+  },
+  exibitionResultImc: {
+    width: "100%",
+    height: "50%",
   },
 });
 
