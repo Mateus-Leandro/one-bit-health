@@ -11,6 +11,7 @@ import {
 import ResultImc from "./ResultImc";
 import styles from "./style";
 import isNotEmpty from "../../functions/Utils";
+import FlatListImc from "../FlatListImc";
 
 export default function Form() {
   const [height, setHeight] = useState(null);
@@ -20,12 +21,15 @@ export default function Form() {
   const [textButton, setTextButton] = useState("Calcular");
   const [weightErrorMessage, setWeightErrorMessage] = useState(null);
   const [heightErrorMessage, setHeightErrorMessage] = useState(null);
+  const [imcList, setImcList] = useState([]);
   const errorMessage = "*campo obrigatório";
 
   function imcCalculator() {
     const heightFormat = height.replace(",", ".");
     const weightFormat = weight.replace(",", ".");
-    setImc((weightFormat / (heightFormat * heightFormat)).toFixed(2));
+    const resultIcm = (weightFormat / (heightFormat * heightFormat)).toFixed(2);
+    setImcList((arr) => [...arr, { id: new Date().getTime(), imc: resultIcm }]);
+    setImc(resultIcm);
   }
 
   function validationImc() {
@@ -103,6 +107,7 @@ export default function Form() {
           </TouchableOpacity>
         </View>
       )}
+      <FlatListImc imcList={imcList} />
     </View>
   );
 }

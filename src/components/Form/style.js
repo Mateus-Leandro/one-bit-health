@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   formContext: {
+    flex: 1,
     width: "100%",
     height: "100%",
     backgroundColor: "#ffffff",
@@ -55,6 +56,7 @@ const styles = StyleSheet.create({
   exibitionResultImc: {
     width: "100%",
     height: "50%",
+    alignContent: "center"
   },
 });
 
